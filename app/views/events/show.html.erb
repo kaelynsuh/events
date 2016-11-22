@@ -20,4 +20,7 @@
 
 </article>
 
-<%= link_to("All Events", root_path) %>
+<nav>
+  <%= link_to("All Events", root_path) %> |
+  <%= link_to("Edit", edit_event_path(@event)) %>
+</nav>
