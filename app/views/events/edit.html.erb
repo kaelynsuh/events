@@ -14,14 +14,14 @@
     <%= f.text_field :location, size: 30 %>
   </p>
   <p>
-    <% f.label :price %>
+    <%= f.label :price %>
     <%= f.number_field :price, size: 6 %>
   </p>
   <p>
     <%= f.label :starts_at %>
     <%= f.datetime_select :starts_at %>
   </p>
-  
+
   <p>
     <%= f.submit %>
   </p>
