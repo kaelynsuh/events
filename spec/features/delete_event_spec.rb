@@ -9,6 +9,6 @@ describe "Deleting an event" do
     click_link 'Delete'
 
     expect(current_path).to eq(events_path)
-    expect(page).not_to have_text(event.title)
+    expect(page).not_to have_text(event.name)
   end
 end

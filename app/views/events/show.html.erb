@@ -22,5 +22,6 @@
 
 <nav>
   <%= link_to("All Events", root_path) %> |
-  <%= link_to("Edit", edit_event_path(@event)) %>
+  <%= link_to("Edit", edit_event_path(@event)) %> |
+  <%= link_to("Delete", event_path(@event), method: :delete, data: { confirm: 'Are you sure?' }) %>
 </nav>
