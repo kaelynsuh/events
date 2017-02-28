@@ -80,7 +80,7 @@ Event.create!([
       setting. It\'s also a great place to practice your
       next conference talk.
       }.squish,
-    image_file_name: 'codercamp.png',
+    # image_file_name: 'codercamp.png',
     capacity: 200
   },
   {
@@ -97,7 +97,7 @@ Event.create!([
       meditation, organic food offerings, and local
       non-for-profit vendors.
     }.squish,
-    image_file_name: 'musicfest.png',
+    # image_file_name: 'musicfest.png',
     capacity: 800
   },
   {

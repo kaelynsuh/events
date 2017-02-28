@@ -3,7 +3,7 @@
 <% @events.each do |event| %>
   <article>
     <header>
-      <%= image_tag event.image_file_name %>
+      <%= image_for(event) %>
       <h2><%= link_to(event.name, event) %></h2>
       <h3><%= pluralize(event.capacity, 'spot') %> available </h3>
     </header>
