@@ -1,5 +1,6 @@
 <article>
   <header>
+    <%= image_tag @event.image_file_name %>
     <h1><%= @event.name %></h1>
     <h2><%= @event.starts_at %></h2>
   </header>
@@ -16,6 +17,11 @@
   <h3>Location</h3>
   <p>
     <%= @event.location %>
+  </p>
+
+  <h3>Capacity</h3>
+  <p>
+    <%= pluralize(@event.capacity, 'spot') %>
   </p>
 
 </article>
