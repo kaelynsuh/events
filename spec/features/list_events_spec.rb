@@ -6,10 +6,12 @@ describe "Viewing the list of events" do
 
     visit events_url
 
-    expect(page).to have_text("Events")
+    expect(page).to have_selector("img[src$='#{event.image_file_name}']")
     expect(page).to have_text(event.name)
+    expect(page).to have_text(event.capacity)
+
+    expect(page).to have_text(event.description[0..10])
     expect(page).to have_text(event.location)
     expect(page).to have_text("$10.00")
-    expect(page).to have_text(event.description[0..10])
   end
 end
