@@ -9,6 +9,14 @@
   </head>
 
   <body>
-    <%= yield %>
+
+  <%= render "layouts/header" %>
+  
+  <%= render "layouts/sidebar" %>
+
+  <%= yield %>
+
+  <%= render "layouts/footer" %>
+
   </body>
 </html>
