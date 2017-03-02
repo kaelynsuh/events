@@ -1,27 +1,7 @@
-@import "colors";
-
-header#page-header {
-  color: $secondary-color;
-  background: $primary-color;
-  padding: 5px;
-  border-bottom: 3px solid darken($primary-color, 10%);
-
-  h1 {
-    text-align: center;
-    text-transform: uppercase;
-  }
-}
-
 footer#page-footer {
-  color: $primary-color;
-  background: $secondary-color;
+  color: #237CBE;
+  background: #F0F0F0;
   padding: 5px;
   text-align: center;
-  border-top: 3px solid darken($secondary-color, 10%);
-}
-
-aside#sidebar {
-  float: right;
-  background: $secondary-color;
-  width: 200px;
+  border-top: 3px solid darken(#F0F0F0, 10%);
 }
