@@ -1,32 +1,32 @@
-<article>
-  <header>
-    <%= image_for(@event) %>
-    <h1><%= @event.name %></h1>
-    <h2><%= @event.starts_at %></h2>
-  </header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1><%= @event.name %></h1>
+    </div>
+  </div>
 
-  <p>
-    <%= @event.description %>
-  </p>
+  <div class="row">
+    <div class="col-md-3">
+      <%= image_for(@event) %>
+    </div>
 
-  <h3>Price</h3>
-  <p>
-    <%= format_price(@event) %>
-  </p>
+    <div class="col-md-9">
+      <h2><%= @event.starts_at %></h2>
+      <p><%= @event.description %></p>
+      <h3>Price</h3>
+      <p><%= format_price(@event) %></p>
 
-  <h3>Location</h3>
-  <p>
-    <%= @event.location %>
-  </p>
+      <h3>Location</h3>
+      <p><%= @event.location %></p>
 
-  <h3>Capacity</h3>
-  <p>
-    <%= pluralize(@event.capacity, 'spot') %>
-  </p>
+      <h3>Capacity</h3>
+      <p><%= pluralize(@event.capacity, 'spot') %></p>
 
-</article>
+      <nav>
+        <%= link_to("Edit", edit_event_path(@event)) %> |
+        <%= link_to("Delete", event_path(@event), method: :delete, data: { confirm: 'Are you sure?' }) %>
+      </nav>
+    </div>
 
-<nav>
-  <%= link_to("Edit", edit_event_path(@event)) %> |
-  <%= link_to("Delete", event_path(@event), method: :delete, data: { confirm: 'Are you sure?' }) %>
-</nav>
+  </div>
+</div>
