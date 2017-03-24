@@ -11,10 +11,10 @@ describe "Editing an event" do
 
     expect(current_path).to eq(edit_event_path(event))
 
-    expect(find_field('Name').value).to eq(event.name)
+    expect(find_field('Event title').value).to eq(event.name)
 
 
-    fill_in 'Name', with: "Updated Event Name"
+    fill_in 'Event title', with: "Updated Event Name"
 
     click_button 'Update Event'
 

@@ -8,12 +8,12 @@ describe "Creating a new event" do
 
     expect(current_path).to eq(new_event_path)
 
-    fill_in "Name", with: "New Event Title"
+    fill_in "Event title", with: "New Event Title"
     fill_in "Description", with: "New Event Descriptions"
     fill_in "Location", with: "New Location"
     fill_in "Price", with: "15.00"
     select (Time.now.year - 1).to_s, :from => "event_starts_at_1i"
-    fill_in "Image file name", with: "event.png"
+    fill_in "Event Image", with: "event.png"
     fill_in "Capacity", with: "200"
 
     click_button 'Create Event'

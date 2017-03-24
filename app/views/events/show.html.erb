@@ -13,15 +13,23 @@
     <div class="col-md-9">
       <h2><%= @event.starts_at %></h2>
       <p><%= @event.description %></p>
-      <h3>Price</h3>
+
+      <div class="page-header">
+        <h3>Price</h3>
+      </div>
       <p><%= format_price(@event) %></p>
 
-      <h3>Location</h3>
+      <div class="page-header">
+        <h3>Location</h3>
+      </div>
       <p><%= @event.location %></p>
 
-      <h3>Capacity</h3>
+      <div class="page-header">
+        <h3>Capacity</h3>
+      </div>
       <p><%= pluralize(@event.capacity, 'spot') %></p>
 
+      <br>
       <nav>
         <%= link_to("Edit", edit_event_path(@event)) %> |
         <%= link_to("Delete", event_path(@event), method: :delete, data: { confirm: 'Are you sure?' }) %>

@@ -14,5 +14,6 @@ module Events
     console do
       ActiveRecord::Base.connection
     end
+    config.time_zone = 'Eastern Time (US & Canada)'
   end
 end

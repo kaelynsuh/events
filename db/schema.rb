@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20170228182454) do
     t.datetime "starts_at"
     t.text     "description"
     t.string   "image_file_name", default: ""
-    t.integer  "capacity",        default: 1
+    t.integer  "capacity"
   end
 
 end

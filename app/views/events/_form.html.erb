@@ -1,37 +1,80 @@
-<%= form_for(@event) do |f| %>
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name, autofocus: true %>
-  </p>
-  <p>
-    <%= f.label :description %>
-    <%= f.text_area :description, cols: 40, rows: 7 %>
-  </p>
-  <p>
-    <%= f.label :location %>
-    <%= f.text_field :location, size: 30 %>
-  </p>
-  <p>
-    <%= f.label :price %>
-    <%= f.number_field :price, size: 6 %>
-  </p>
-  <p>
-    <%= f.label :starts_at %>
-    <%= f.datetime_select :starts_at %>
-  </p>
-  <p>
-    <%= f.label :image_file_name%>
-    <%= f.text_field :image_file_name, size: 30,
-        placeholder: "GIF, JPG, or PNG file name" %>
-  </p>
-  <p>
-    <%= f.label :capacity %>
-    <%= f.number_field :capacity %>
-  </p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for(@event) do |f| %>
 
-  <p>
-    <%= f.submit %>
-    <%= link_to "Cancel", events_path %>
-  </p>
+        <!-- Event Details -->
+        <div class="row">
+          <div class="form-group">
+            <%= f.label :name, "Event title" %>
+            <%= f.text_field :name, placeholder: "Add a short, clear name", class: "form-control", autofocus: true %>
+          </div>
+        </div>
 
-<% end %>
+        <div class="row">
+          <div class="form-group">
+            <%= f.label :location %>
+            <%= f.text_field :location, placeholder: "Include a place or address", class: "form-control" %>
+          </div>
+        </div>
+
+        <!-- fix this later -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= f.label :starts_at, "Starts" %>
+
+              <%= f.datetime_field :starts_at, class: "form-control" %>
+
+              <!-- Splitting date and time -->
+              <!-- <%= f.date_field :starts_at, class: "form-control", value: Date.today %> -->
+              <!-- <%= f.time_field :starts_at, class: "form-control" %> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= f.label :image_file_name, "Event Image" %>
+              <%= f.text_field :image_file_name, placeholder: "Add event image", class: "form-control", size: 30 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="form-group">
+            <%= f.label :description %>
+            <%= f.text_area :description, placeholder: "Tell people about the event", class: "form-control", rows: 5 %>
+          </div>
+        </div>
+
+
+        <!-- Create Tickets -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= f.label :price %>
+              <%= f.number_field :price, placeholder: "15.00", class: "form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= f.label :capacity %>
+              <%= f.number_field :capacity, placeholder: "100", class: "form-control" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <%= f.submit class: "btn btn-primary" %>
+          <%= link_to "Cancel", events_path, class: "btn btn-default" %>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>
