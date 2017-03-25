@@ -12,7 +12,7 @@ describe "Creating a new event" do
     fill_in "Description", with: "New Event Descriptions"
     fill_in "Location", with: "New Location"
     fill_in "Price", with: "15.00"
-    select (Time.now.year - 1).to_s, :from => "event_starts_at_1i"
+    # select (Time.now.year - 1).to_s, :from => "event_starts_at_1i"
     fill_in "Event Image", with: "event.png"
     fill_in "Capacity", with: "200"
 
