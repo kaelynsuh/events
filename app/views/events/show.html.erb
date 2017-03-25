@@ -31,8 +31,8 @@
 
       <br>
       <nav>
-        <%= link_to("Edit", edit_event_path(@event)) %> |
-        <%= link_to("Delete", event_path(@event), method: :delete, data: { confirm: 'Are you sure?' }) %>
+        <%= link_to "Edit", edit_event_path(@event), class: "btn btn-primary" %>
+        <%= link_to "Delete", event_path(@event), class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %>
       </nav>
     </div>
 

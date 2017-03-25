@@ -2,17 +2,17 @@
 <% @events.each do |event| %>
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+      <div class="col-md-3 col-md-offset-6">
         <h2><%= link_to(event.name, event) %></h2>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-3 col-md-offset-3">
         <%= image_for(event) %>
       </div>
 
-      <div class="col-md-9">
+      <div class="col-md-3">
         <h3><%= pluralize(event.capacity, 'spot') %> available </h3>
         <p><%= truncate(event.description, length: 40, separator: ' ') %></p>
         <p>When: <%= event.starts_at.to_s %></p>
