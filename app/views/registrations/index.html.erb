@@ -1,10 +1,17 @@
-<h1>Registrations for <%= link_to(@event.name, @event) %> </h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Registrations for <%= link_to(@event.name, @event) %></h1>
+    </div>
+  </div>
 
-<ol>
   <% @registrations.each do |r| %>
-    <li>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-3">
       <%= mail_to(r.email, r.name) %>
       (<%= r.how_heard %>)
-    </li>
+    </div>
+  </div>
   <% end %>
-</ol>
+
+</div>

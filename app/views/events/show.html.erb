@@ -14,26 +14,38 @@
       <h2><%= @event.starts_at %></h2>
       <p><%= @event.description %></p>
 
-      <div class="page-header">
-        <h3>Price</h3>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Price</h3><hr>
+          <p><%= format_price(@event) %></p>
+        </div>
       </div>
-      <p><%= format_price(@event) %></p>
 
-      <div class="page-header">
-        <h3>Location</h3>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Location</h3><hr>
+          <p><%= @event.location %></p>
+        </div>
       </div>
-      <p><%= @event.location %></p>
 
-      <div class="page-header">
-        <h3>Capacity</h3>
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Capacity</h3><hr>
+          <p><%= pluralize(@event.capacity, 'spot') %></p>
+        </div>
       </div>
-      <p><%= pluralize(@event.capacity, 'spot') %></p>
-
       <br>
-      <nav>
+
+      <div class="actions">
+        <%= link_to "Who's Registered?", event_registrations_path(@event) %>
+      </div>
+      <br>
+
+      <div class="actions">
         <%= link_to "Edit", edit_event_path(@event), class: "btn btn-primary" %>
         <%= link_to "Delete", event_path(@event), class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %>
-      </nav>
+      </div>
+
     </div>
 
   </div>
